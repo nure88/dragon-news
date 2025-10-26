@@ -20,12 +20,13 @@ const password = e.target.password.value;
 signIn(email,password)
 .then((res) => {
   // toast(res.user)
-  // console.log(res.user);
+  console.log(res.user);
   navigate(`${location.state? location.state:"/" }`)
 }).catch((error) => {
   
-
+  
   setError(error.message);
+  console.log(error.message);
 
 })
 
